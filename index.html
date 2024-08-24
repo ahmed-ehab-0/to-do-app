@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      input {
+        outline-style: none;
+      }
+      .container {
+        width: 350px;
+        margin: 20px auto;
+      }
+      h1 {
+        text-align: center;
+        padding-bottom: 20px;
+        color: red;
+      }
+      .form {
+        background-color: #eee;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+      }
+      .form input[type="text"] {
+        border-radius: 6px;
+        flex: 1;
+        border: 1px solid #ccc;
+        padding: 10px;
+        letter-spacing: 1px;
+        font-size: 16px;
+      }
+      .form input[type="submit"] {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .tasks {
+        display: none;
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 4px;
+      }
+      .tasks .task {
+        padding: 12px 10px;
+        background-color: white;
+        border-radius: 6px;
+        transition: 0.3s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        letter-spacing: 0.8px;
+      }
+
+      .tasks .task:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      .tasks .task:hover {
+        background-color: #f7f7f7;
+      }
+
+      .tasks .task.done {
+        opacity: 0.5;
+      }
+
+      .tasks .task span {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        padding: 3px 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      @media (min-width: 576px) {
+        .container {
+          width: 500px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 650px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          width: 800px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          width: 900px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To Do App</h1>
+      <div class="form">
+        <input type="text" />
+        <input type="submit" value="Add Task" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
